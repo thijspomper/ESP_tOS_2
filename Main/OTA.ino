@@ -2,6 +2,7 @@
 
 void initOTA(){
   if(oTA){
+    ArduinoOTA.setHostname(deviceName);
     ArduinoOTA.onStart([]() {
       String type;
       if (ArduinoOTA.getCommand() == U_FLASH) {
