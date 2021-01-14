@@ -24,4 +24,4 @@
 
 
 ## License  
-Distributed under the GNU GPL V3 License. See `LICENSE` for more information.  
+Distributed under the `GNU GPL V3` License. See `LICENSE` for more information.  
