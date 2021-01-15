@@ -3,10 +3,11 @@
 
 ## Implemented features  
   - [x] Wifi support  
+  - [ ] Multichannel log
   - [ ] MQTT support  
   - [ ] DHT sensor support  
   - [ ] GUI config manager  
-  - [ ] OTA update support  
+  - [x] OTA update support  
   - [ ] Dallas sensor support  
   - [ ] Remote settings  
   - [ ] RF433 support  
