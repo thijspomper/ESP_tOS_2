@@ -6,7 +6,7 @@ const bool wifi = true;
 const bool oTA = true;
 const bool debug = true;
 
-const char* deviceName = "tOS_Next";
+const char* deviceName = "B_tOS";
 
-const char* wifiSSID = "Wouldn't you";
-const char* wifiPass = "Like to know";
+const char* wifiSSID = "Your SSID";
+const char* wifiPass = "Your password";

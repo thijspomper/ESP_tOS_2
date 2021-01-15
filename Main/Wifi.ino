@@ -5,13 +5,13 @@ void initWifi(){
     WiFi.mode(WIFI_STA);
     WiFi.hostname(deviceName);
     WiFi.begin(wifiSSID, wifiPass);
-    writeDebug("Connecting...");
+    writeDebug("[Wifi]: Connecting...");
     while (WiFi.waitForConnectResult() != WL_CONNECTED) {
-      writeDebug("Connection Failed! Rebooting...");
+      writeDebug("[Wifi]: Connection Failed! Rebooting...");
       delay(5000);
       ESP.restart();
     }
-    writeDebug("Connected");
+    writeDebug("[Wifi]: Connected");
     writeDebug(WiFi.localIP());
   }
 }

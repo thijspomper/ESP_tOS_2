@@ -2,36 +2,31 @@
 
 void initOTA(){
   if(oTA){
-    ArduinoOTA.setHostname(deviceName);
     ArduinoOTA.onStart([]() {
       String type;
       if (ArduinoOTA.getCommand() == U_FLASH) {
-        type = "sketch";
-      } else { // U_FS
-        type = "filesystem";
+        writeDebug("[OTA]: Received sketch");
+      } else {
+        writeDebug("[OTA]: Received filesystem");
       }
-  
-      // NOTE: if updating FS this would be the place to unmount FS using FS.end()
-      writeDebug("Start updating " + type);
     });
     ArduinoOTA.onEnd([]() {
-      writeDebug("\nEnd");
-    });
-    ArduinoOTA.onProgress([](unsigned int progress, unsigned int total) {
+      writeDebug("[OTA]: Finished, rebooting");
     });
     ArduinoOTA.onError([](ota_error_t error) {
       if (error == OTA_AUTH_ERROR) {
-        writeDebug("Auth Failed");
+        writeDebug("[OTA]: Auth Failed");
       } else if (error == OTA_BEGIN_ERROR) {
-        writeDebug("Begin Failed");
+        writeDebug("[OTA]: Begin Failed");
       } else if (error == OTA_CONNECT_ERROR) {
-        writeDebug("Connect Failed");
+        writeDebug("[OTA]: Connect Failed");
       } else if (error == OTA_RECEIVE_ERROR) {
-        writeDebug("Receive Failed");
+        writeDebug("[OTA]: Receive Failed");
       } else if (error == OTA_END_ERROR) {
-        writeDebug("End Failed");
+        writeDebug("[OTA]: Failed");
       }
     });
+    ArduinoOTA.setHostname(deviceName);
     ArduinoOTA.begin();
   }
 }
