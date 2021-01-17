@@ -1,7 +1,7 @@
 #include "OTA.h"
 
 void initOTA(){
-  if(oTA){
+  if(ota){
     ArduinoOTA.onStart([]() {
       String type;
       if (ArduinoOTA.getCommand() == U_FLASH) {
@@ -32,7 +32,7 @@ void initOTA(){
 }
 
 void handleOTA(){
-  if(oTA){
+  if(ota){
     ArduinoOTA.handle();
   }
 }

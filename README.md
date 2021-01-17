@@ -4,7 +4,7 @@
 ## Implemented features  
   - [x] Wifi support  
   - [ ] Multichannel log
-  - [ ] MQTT support  
+  - [x] MQTT support  
   - [ ] DHT sensor support  
   - [ ] GUI config manager  
   - [x] OTA update support  
