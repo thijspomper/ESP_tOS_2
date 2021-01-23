@@ -5,10 +5,10 @@
   - [x] Wifi support  
   - [ ] Multichannel log
   - [x] MQTT support  
-  - [ ] DHT sensor support  
+  - [x] DHT sensor support  
   - [ ] GUI config manager  
   - [x] OTA update support  
-  - [ ] Dallas sensor support  
+  - [x] Dallas sensor support  
   - [ ] Remote settings  
   - [ ] RF433 support  
   - [ ] AP setup support  
