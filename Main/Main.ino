@@ -5,9 +5,12 @@ void setup() {
   initWifi();
   initOTA();
   initMqtt();
+  initTemp();
 }
 
 void loop() {
-  handleOTA();
   handleMqtt();
+  handleOTA();
+  handleTemp();
+  delay(1000);
 }

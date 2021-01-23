@@ -2,6 +2,7 @@
 
 void initMqtt(){
   client.setServer(mqttServer, 1883);
+  handleMqtt();
 }
 
 void handleMqtt(){
@@ -12,8 +13,7 @@ void handleMqtt(){
 }
 
 void publishMqtt(const char* message, const char* topic){
-  
-  client.publish(message, topic);
+  client.publish(topic, message);
 }
 
 void reconnect(){
