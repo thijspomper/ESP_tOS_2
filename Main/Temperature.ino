@@ -2,7 +2,6 @@
 
 void initTemp(){
   sensors.begin();
-  woonkamer.begin();
   for(int i = 0; i < 9; i++){
     sensors.setResolution(dallasSensorList[i], dallasResolution);
   }
